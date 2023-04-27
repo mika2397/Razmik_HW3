@@ -9,8 +9,6 @@ import retrofit2.http.Query
 
 interface NewsApiService {
 
-//    @GET("/v2/top-headlines?country={country}?&apiKey=35809363b23d4e5b8364338193488151")
-//        fun fetchNews(@Query("country") country: String?): newsData
     @GET("/v2/top-headlines?country=us&apiKey=f4239382e2b44253be900285008892aa")
     suspend fun getNews(
         @Query("category") category: String = "",

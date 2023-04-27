@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                                 searchText = it
                                 dataLoaderViewModel.loadFilteredNews(categoryText,it)
                             }
-                            //onClick = dataLoaderViewModel::loadNews,
+
                         )
                     }
 
@@ -93,90 +93,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-
-//@Composable
-//fun NewsList(newsList: List<News>) {
-//
-//
-//    LazyColumn {
-//        item {
-//
-//            Column(
-//                Modifier
-//                    .fillMaxWidth()
-//                    .background(Color.LightGray)){
-//                Row(
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(12.dp),
-//                    verticalAlignment = Alignment.CenterVertically,
-//                ) {
-//                    SearchBar(
-//                        onSearch = { //query ->
-//
-//                    })
-//                    FilterExpand(
-//
-//                        filters = listOf(
-//                            Filter(1, "Business"),
-//                            Filter(2, "Entertainment"),
-//                            Filter(3, "General"),
-//                            Filter(4, "Health"),
-//                            ),
-//
-//                        onFilterSelected = { filter ->
-//                            Log.d("Filter done", "filter")
-//                      //  onFilterSelected = { filter ->
-//                            //onSelectFilter(filter.category)
-//
-//                    }
-//                )
-//
-//                }
-//
-//            }
-//        }
-//        items(newsList) {   news ->
-//            NewsCard(news)
-//        }
-//    }
-//}
-//
-//@Composable
-//fun NewsCard(news: News) {
-//
-//    Column {
-//
-//        Text(text = news.title,
-//            style = TextStyle(fontSize = 24.sp),
-//            textAlign =  TextAlign.Center,
-//            modifier = Modifier
-//                .wrapContentHeight()
-//                .fillMaxWidth())
-//
-//
-//        AsyncImage(
-//
-//            model = news.imageUrl,
-//            error = painterResource(id = R.drawable.errorimg),
-//            modifier = Modifier
-//                .wrapContentHeight()
-//                .fillMaxWidth(),
-//            contentDescription = "",
-//            placeholder = painterResource(id = R.drawable.loadingimg)
-//        )
-//        Text(text = news.author,
-//            style = TextStyle(fontSize = 12.sp),
-//            textAlign =  TextAlign.Center,
-//            modifier = Modifier
-//                .wrapContentHeight()
-//                .fillMaxWidth())
-//
-//        Divider(
-//            color = Color.Black,
-//            modifier = Modifier.padding(vertical = 20.dp)
-//        )
-//    }
-//
-//}

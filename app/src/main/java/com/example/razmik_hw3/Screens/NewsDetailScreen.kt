@@ -21,7 +21,6 @@ import com.example.razmik_hw3.R
 @Composable
 fun NewsDetailScreen(navController: NavController,
                      news: News,
-    //   newsListResult: List<News>,
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
